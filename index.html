@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cook It Yourself</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./home-intro.css" />
+    <link rel="stylesheet" href="./home-recipes.css" />
+    <link rel="stylesheet" href="./home-categories.css" />
+    <link rel="stylesheet" href="./home-best-recipes.css" />
+    <link rel="stylesheet" href="./footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <nav id="navbar" class="flex justify-evenly items-center bg-white p-4">
+      <!-- <div class="image-container">
+
+                <img class="" src="./0ca372d8-daad-4864-8cbf-92464e3d295a (1).png" alt="">
+            </div> -->
+            <img hidden class="none" src="./Screenshot 2025-07-21 115803.png" alt="">
+      <div class="logo-container flex items-center justify-center">
+        <a
+          href="#"
+          class="rounded-full border-2 border-black p-4 font-bold px-6 shadow"
+          >Cook It Yourself</a
+        >
+      </div>
+      <ul
+        class="nav-menu flex justify-around items-center text-black px-4 gap-8"
+      >
+        <li>
+          <a href="#intro" class="active nav-links font-semibold">Home</a>
+        </li>
+        <li>
+          <a href="/recipes.html" class="nav-links font-semibold">Recipes</a>
+        </li>
+        <li>
+          <a href="/category.html" class="nav-links font-semibold"
+            >Categories</a
+          >
+        </li>
+        <li>
+          <a href="/about.html" class="nav-links font-semibold">About</a>
+        </li>
+        <li>
+          <a href="/contact.html" class="nav-links font-semibold">Contact</a>
+        </li>
+      </ul>
+      <div id="search-bar" class="flex justify-end items-center">
+        <div
+          class="wrapper border border-black rounded-full flex items-center px-4 py-2"
+        >
+          <input type="text" placeholder="Search..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+
+      <div id="ham-icon">
+        <div class="hamburger" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="mobile-nav-container">
+        <ul
+          class="mobile-nav-menu flex justify-around items-center text-black px-4 gap-8"
+        >
+          <div id="mobile-search-bar" class="flex justify-end items-center">
+            <div
+              class="wrapper border border-black rounded-full flex items-center px-4 py-2"
+            >
+              <input type="text" placeholder="Search..." />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+          <li>
+            <a href="#intro" class="active nav-links font-semibold">Home</a>
+          </li>
+          <li>
+            <a href="/recipes.html" class="nav-links font-semibold">Recipes</a>
+          </li>
+          <li>
+            <a href="/category.html" class="nav-links font-semibold"
+              >Categories</a
+            >
+          </li>
+          <li>
+            <a href="/about.html" class="nav-links font-semibold">About</a>
+          </li>
+          <li>
+            <a href="/contact.html" class="nav-links font-semibold">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- intro section -->
+
+    <section id="intro" class="px-10 mt-2">
+      <div
+        class="flex relative justify-between items-end bg-gray-100 rounded-2xl shadow-lg overflow-hidden"
+      >
+        <div
+          class="intro-text flex flex-col items-start justify-center h-screen text-white gap-4 px-9 ml-9"
+        >
+          <h1 class="text-5xl font-bold">Idea Simmering?</h1>
+          <p
+            class="text-yellow-700 text-4xl md:text-5xl font-extrabold drop-shadow mb-2 animate-pulse"
+          >
+            Time to Serve It
+          </p>
+          <p
+            class="text-red-400 text-4xl md:text-5xl font-extrabold flex items-center gap-2 animate-bounce"
+          >
+            Hot <span class="text-3xl md:text-4xl">🔥</span>
+          </p>
+          <div
+            class="intro-button-container flex items-center justify-start gap-4 w-full"
+          >
+            <a
+              href="/recipes"
+              class="bg-gray-900 text-white px-6 py-2 mt-5 rounded-full shadow-lg hover:bg-gray-400 transition duration-300 flex flex items-center justify-center"
+              >Explore Recipes
+              <span>
+                <img width="40px" src="./recipe-book.png" alt="" />
+              </span>
+            </a>
+            <a
+              href="#recipes"
+              class="bg-gray-400 text-white px-6 py-2 mt-5 rounded-full shadow-lg hover:bg-gray-900 transition duration-300 flex flex items-center gap-2 justify-center"
+              >Get our App
+              <span>
+                <img
+                  width="40px"
+                  class="rounded-full"
+                  src="./download-icon.png"
+                  alt=""
+                />
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="intro-image-container">
+          <img
+            src="./intro-image.webp"
+            alt="Intro Image"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- intro section -->
+
+    <!-- recipes section -->
+    <section
+      id="recipes"
+      class="flex i flex-col justify-evenly items-center pt-14"
+    >
+      <div class="flex flex-col items-center flax-col gap-4">
+        <h2 class="text-5xl font-bold">Unlock Your Inner <span>Chef</span></h2>
+        <p class="text-5xl font-bold text-center">
+          with Our <span>Recipes</span>
+        </p>
+      </div>
+      <div class="recipes-scroll-container pt-14 w-full overflow-hidden">
+        <div class="recipes-list flex gap-8">
+          <a
+            class="recipe-item flex flex-col items-start justify-center gap-2 relative rounded-lg overflow-hidden shadow-lg"
+          >
+            <img
+              class=""
+              src="https://img.freepik.com/free-photo/close-up-man-s-hand-cutting-red-bellpepper-with-sharp-knife-chopping-board_23-2148120454.jpg?semt=ais_hybrid&w=740"
+              alt=""
+            />
+            <span class="bg-white absolute rounded-full border px-3 py-1"
+              >Easy Recipes</span
+            >
+          </a>
+          <a
+            class="recipe-item flex flex-col items-start justify-center gap-2 relative rounded-lg overflow-hidden shadow-lg"
+          >
+            <img
+              class=""
+              src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/06/paneer-sandwich.jpg"
+              alt=""
+            />
+            <span class="bg-white absolute rounded-full border px-3 py-1"
+              >Instant Recipes</span
+            >
+          </a>
+          <a
+            class="recipe-item flex flex-col items-start justify-center gap-2 relative rounded-lg overflow-hidden shadow-lg"
+          >
+            <img
+              class=""
+              src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/spicy_salmon_bite_rice_16300_16x9.jpg"
+              alt=""
+            />
+            <span class="bg-white absolute rounded-full border px-3 py-1"
+              >Healthy Recipes</span
+            >
+          </a>
+          <a
+            class="recipe-item flex flex-col items-start justify-center gap-2 relative rounded-lg overflow-hidden shadow-lg"
+          >
+            <img
+              class=""
+              src="https://hips.hearstapps.com/hmg-prod/images/comfort-food-recipes-chicken-pot-pie-soup-66d9e96824766.jpg?crop=1xw:1xh;center,top&resize=980:*"
+              alt=""
+            />
+            <span class="bg-white absolute rounded-full border px-3 py-1"
+              >Comfort Recipes</span
+            >
+          </a>
+          <a
+            class="recipe-item flex flex-col items-start justify-center gap-2 relative rounded-lg overflow-hidden shadow-lg"
+          >
+            <img
+              class=""
+              src="https://www.eatingwell.com/thmb/8eyT0zTaRaeTKo6-R8aAXB2Mpes=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/buffalo-cauliflower-grain-bowl-beauty-square-a23741fab1694775866fa396755b4e32.jpg"
+              alt=""
+            />
+            <span class="bg-white absolute rounded-full border px-3 py-1"
+              >Protein Recipes</span
+            >
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- recipes section -->
+
+    <!-- categories section -->
+    <section id="categories" class="py-12 px-4 max-w-6xl mx-auto">
+      <h2 class="text-5xl font-semibold mb-8 text-gray-800 text-center">
+        Categories
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Breakfast Card -->
+        <div
+          class="bg-gradient-to-br from-yellow-200 via-yellow-100 to-yellow-300 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <img
+            src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/09/egg-sandwich-recipe.jpg"
+            alt="Breakfast"
+            class="h-full mb-4 rounded-full shadow-md border-4 border-white"
+          />
+          <h3 class="text-xl font-bold mb-2 text-yellow-800">Breakfast</h3>
+          <p class="text-gray-700 text-center">
+            Start your day with energizing and tasty breakfast recipes.
+          </p>
+        </div>
+        <!-- Lunch Card -->
+        <div
+          class="bg-gradient-to-br from-green-200 via-green-100 to-green-300 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <img
+            src="https://www.tasteofhome.com/wp-content/uploads/2025/02/Grilled-Vegetable-and-Goat-Cheese-Wraps_EXPS_TOHSummer25_277903_MD_P2_01_29_1b.jpg"
+            alt="Lunch"
+            class="h-full mb-4 rounded-full shadow-md border-4 border-white"
+          />
+          <h3 class="text-xl font-bold mb-2 text-green-800">Lunch</h3>
+          <p class="text-gray-700 text-center">
+            Delicious lunch ideas to keep you fueled throughout the day.
+          </p>
+        </div>
+        <!-- Dinner Card -->
+        <div
+          class="bg-gradient-to-br from-blue-200 via-blue-100 to-blue-300 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <img
+            src="https://cdn.loveandlemons.com/wp-content/uploads/2019/09/dinner-ideas-2.jpg"
+            alt="Dinner"
+            class="h-full mb-4 rounded-full shadow-md border-4 border-white"
+          />
+          <h3 class="text-xl font-bold mb-2 text-blue-800">Dinner</h3>
+          <p class="text-gray-700 text-center">
+            Hearty and satisfying dinner recipes for every occasion.
+          </p>
+        </div>
+        <!-- Snacks Card -->
+        <div
+          class="bg-gradient-to-br from-pink-200 via-pink-100 to-pink-300 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <img
+            src="https://static.toiimg.com/thumb/59217136.cms?width=1200&height=900"
+            alt="Snacks"
+            class="h-full mb-4 rounded-full shadow-md border-4 border-white"
+          />
+          <h3 class="text-xl font-bold mb-2 text-pink-800">Snacks</h3>
+          <p class="text-gray-700 text-center">
+            Quick and easy snacks for any time of the day.
+          </p>
+        </div>
+        <!-- Desserts Card -->
+        <div
+          class="bg-gradient-to-br from-purple-200 via-purple-100 to-purple-300 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <img
+            src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/09/egg-sandwich-recipe.jpg"
+            alt="Desserts"
+            class="h-full mb-4 rounded-full shadow-md border-4 border-white"
+          />
+          <h3 class="text-xl font-bold mb-2 text-purple-800">Desserts</h3>
+          <p class="text-gray-700 text-center">
+            Indulge in sweet treats and delightful desserts.
+          </p>
+        </div>
+        <!-- Drinks Card -->
+        <div
+          class="bg-gradient-to-br from-red-200 via-teal-100 to-teal-300 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <img
+            src="https://images.immediate.co.uk/production/volatile/sites/30/2021/11/Cranberry-gin-fizz-e5ccdc2.jpg?quality=90&resize=556,505"
+            alt="Drinks"
+            class="h-full mb-4 rounded-full shadow-md border-4 border-white"
+          />
+          <h3 class="text-xl font-bold mb-2 text-teal-800">Drinks</h3>
+          <p class="text-gray-700 text-center">
+            Refreshing beverages and creative drink recipes.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- categories section -->
+
+    <!-- best-recipes section -->
+    <section
+      id="best-recipes"
+      class="bg-gray-100 py-12 w-full flex flex-col items-center"
+    >
+      <h2 class="text-4xl font-semibold mb-10 text-center">
+        Our <span class="text-yellow-500 font-bold">Best</span>
+        <span class="text-black">Recipes</span>
+      </h2>
+      <div
+        class="flex gap-9 flex-wrap justify-center items-center max-w-7xl mx-auto"
+      >
+        <!-- Card 1 -->
+        <div
+          class="best-recipes-item bg-white rounded-xl shadow-md flex flex-col items-center transition-transform duration-200 hover:scale-105"
+        >
+          <img
+            src="https://tastycurryrestaurantandpizza.com/wp-content/uploads/2020/06/chole-bhature.jpg"
+            alt="Chole Bhature"
+            class="rounded-lg w-full h-full object-cover"
+          />
+          <div class="bg-white rounded-b-xl w-full flex justify-center -mt-8">
+            <span
+              class="absolute bg-white text-yellow-600 font-semibold px-4 py-2 rounded-full shadow text-base"
+              >Chole Bhature</span
+            >
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="best-recipes-item bg-white rounded-xl shadow-md flex flex-col items-center transition-transform duration-200 hover:scale-105"
+        >
+          <img
+            src="https://www.aline-made.com/wp-content/uploads/2024/12/Paneer-Butter-Masala-2-scaled.jpg"
+            alt="Paneer Butter Masala"
+            class="rounded-lg w-full h-full object-cover"
+          />
+          <div class="bg-white rounded-b-xl w-full flex justify-center -mt-8">
+            <span
+              class="absolute bg-white text-yellow-600 font-semibold px-4 py-2 rounded-full shadow text-base"
+              >Paneer Butter Masala</span
+            >
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="best-recipes-item bg-white rounded-xl shadow-md flex flex-col items-center transition-transform duration-200 hover:scale-105"
+        >
+          <img
+            src="https://ministryofcurry.com/wp-content/uploads/2019/02/Paneer-Vegetable-Biryani-3.jpg"
+            alt="Veg Biryani"
+            class="rounded-lg w-full h-full object-cover"
+          />
+          <div class="bg-white rounded-b-xl w-full flex justify-center -mt-8">
+            <span
+              class="absolute bg-white text-yellow-600 font-semibold px-4 py-2 rounded-full shadow text-base"
+              >Veg Biryani</span
+            >
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="best-recipes-item bg-white rounded-xl shadow-md flex flex-col items-center transition-transform duration-200 hover:scale-105"
+        >
+          <img
+            src="https://www.cookwithmanali.com/wp-content/uploads/2020/05/Masala-Dosa.jpg"
+            alt="Masala Dosa"
+            class="rounded-lg w-full h-full object-cover"
+          />
+          <div class="bg-white rounded-b-xl w-full flex justify-center -mt-8">
+            <span
+              class="absolute bg-white text-yellow-600 font-semibold px-4 py-2 rounded-full shadow text-base"
+              >Masala Dosa</span
+            >
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="best-recipes-item bg-white rounded-xl shadow-md flex flex-col items-center transition-transform duration-200 hover:scale-105"
+        >
+          <img
+            src="https://veganbell.com/wp-content/uploads/2025/02/Rajma-Chawal-Recipe-Featured-Image-819x1024.jpg.webp"
+            alt="Rajma Chawal"
+            class="rounded-lg w-full h-full object-cover"
+          />
+          <div class="bg-white rounded-b-xl w-full flex justify-center -mt-8">
+            <span
+              class="absolute bg-white text-yellow-600 font-semibold px-4 py-2 rounded-full shadow text-base"
+              >Rajma Chawal</span
+            >
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="best-recipes-item bg-white rounded-xl shadow-md flex flex-col items-center transition-transform duration-200 hover:scale-105"
+        >
+          <img
+            src="https://almondhouse.com/cdn/shop/files/1_IMG_9491_1e1968b7-b144-49ba-a4ed-2659e95a3bcb.jpg?v=1703680462"
+            alt="Gulab Jamun"
+            class="rounded-lg w-full h-full object-cover"
+          />
+          <div class="bg-white rounded-b-xl w-full flex justify-center -mt-8">
+            <span
+              class="absolute bg-white text-yellow-600 font-semibold px-4 py-2 rounded-full shadow text-base"
+              >Gulab Jamun</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- best-recipes section -->
+
+    <!-- tips-and-tricks section -->
+    <section id="tips-tricks" class="py-16 px-4 max-w-7xl mx-auto">
+      <h2 class="text-4xl font-bold mb-12 text-center text-gray-800">
+        🍳 Cooking Tips & Tricks
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Tip 1 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <i class="fas fa-leaf text-green-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Use Fresh Ingredients</h3>
+          <p class="text-gray-600 text-center">
+            Fresh ingredients bring better flavor and nutrition. Shop local and
+            seasonal for the best results.
+          </p>
+        </div>
+
+        <!-- Tip 2 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <i class="fas fa-fire text-red-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Preheat Your Pan</h3>
+          <p class="text-gray-600 text-center">
+            Always heat your pan before adding food. It helps with even cooking
+            and prevents sticking.
+          </p>
+        </div>
+
+        <!-- Tip 3 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <i class="fas fa-balance-scale text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Measure Ingredients</h3>
+          <p class="text-gray-600 text-center">
+            Precise measurements lead to consistent results, especially in
+            baking or complex recipes.
+          </p>
+        </div>
+
+        <!-- Tip 4 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <i class="fas fa-clock text-blue-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Let Flavors Marinate</h3>
+          <p class="text-gray-600 text-center">
+            Allowing ingredients to rest or marinate helps deepen flavors and
+            improve the final taste.
+          </p>
+        </div>
+
+        <!-- Tip 5 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <i class="fas fa-utensils text-purple-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Don’t Overcrowd the Pan</h3>
+          <p class="text-gray-600 text-center">
+            Crowding lowers the temperature and causes steaming instead of
+            searing. Give your food space to breathe!
+          </p>
+        </div>
+
+        <!-- Tip 6 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <i class="fas fa-tint text-teal-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Season As You Go</h3>
+          <p class="text-gray-600 text-center">
+            Build layers of flavor by seasoning throughout the cooking
+            process—not just at the end.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- tips-and-tricks section -->
+    <!-- Footer Section -->
+    <footer class="footer-section bg-gray-800 text-white pt-12 pb-6 mt-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="footer-content">
+          <div class="footer-section-main">
+            <div class="footer-logo">
+              <span
+                class="text-3xl font-bold border-2 border-white rounded-full px-6 py-3"
+              >
+                Cook It Yourself
+              </span>
+              <p class="mt-4 text-gray-300 max-w-md">
+                Your ultimate destination for delicious recipes, cooking tips,
+                and culinary inspiration.
+              </p>
+            </div>
+
+            <div class="footer-social">
+              <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+              <div class="social-icons">
+                <a href="#" class="social-icon">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="/index.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/recipes.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Recipes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/category.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Categories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/about.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >About</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4 class="text-lg font-bold mb-4">Categories</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Breakfast</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Lunch</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Dinner</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Snacks</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4 class="text-lg font-bold mb-4">Support</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="/contact.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Contact Us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >FAQ</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Terms of Service</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            <p>
+              &copy; <span id="footer-year"></span> Cook It Yourself. All rights
+              reserved.
+            </p>
+          </div>
+          <div class="footer-newsletter">
+            <h4 class="text-lg font-bold mb-2">Subscribe to our newsletter</h4>
+            <div class="newsletter-form">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="newsletter-input"
+              />
+              <button class="newsletter-button">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Developer Tag -->
+    <a
+      href="https://github.com/Abhishek7242"
+      target="_blank"
+      title="Abhishek Verma (GitHub)"
+      class="fixed bottom-6 right-6 z-50 flex flex-col items-center group"
+    >
+      <img
+        src="./Profile_Image.png"
+        alt="Abhishek Verma"
+        class="w-16 h-16 rounded-full border-4 border-orange-400 shadow-lg transition-transform transform group-hover:scale-110 bg-white"
+      />
+      <span
+        class="mt-2 px-3 bg-black py-1 bg-orange-400 text-white text-xs font-bold rounded-full shadow-lg opacity-90 group-hover:opacity-100 transition-opacity select-none"
+      >
+        Developer
+      </span>
+    </a>
+
+    <script>
+      // Set current year in footer
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("footer-year").textContent =
+          new Date().getFullYear();
+
+        // Add click handlers for category cards
+        const categoryButtons = document.querySelectorAll(".card-button");
+        categoryButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const categoryName =
+              this.parentElement.querySelector(".card-title").textContent;
+            alert(
+              `Exploring ${categoryName} recipes! This would navigate to the category page.`
+            );
+          });
+        });
+      });
+    </script>
+
+    <script src="./navbar.js"></script>
+  </body>
+</html>

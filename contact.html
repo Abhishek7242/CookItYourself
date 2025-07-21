@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cook It Yourself</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./home/intro.css" />
+    <link rel="stylesheet" href="./home/recipes.css" />
+    <link rel="stylesheet" href="./home/categories.css" />
+    <link rel="stylesheet" href="./recipes/best-recipes.css" />
+    <link rel="stylesheet" href="./recipes/top-recipes.css" />
+    <link rel="stylesheet" href="./footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./recipes/find-recipes.css" />
+  </head>
+
+  <body>
+    <nav id="navbar" class="flex justify-evenly items-center bg-white p-4">
+      <!-- <div class="image-container">
+
+                <img class="" src="./0ca372d8-daad-4864-8cbf-92464e3d295a (1).png" alt="">
+            </div> -->
+      <div class="logo-container flex items-center justify-center">
+        <a
+          href="#"
+          class="rounded-full border-2 border-black p-4 font-bold px-6 shadow"
+          >Cook It Yourself</a
+        >
+      </div>
+      <ul
+        class="nav-menu flex justify-around items-center text-black px-4 gap-8"
+      >
+        <li>
+          <a href="/index.html" class=" nav-links font-semibold">Home</a>
+        </li>
+        <li>
+          <a href="/recipes.html" class="nav-links font-semibold">Recipes</a>
+        </li>
+        <li>
+          <a href="/category.html" class=" nav-links font-semibold"
+            >Categories</a
+          >
+        </li>
+        <li>
+          <a href="/about.html" class="nav-links font-semibold">About</a>
+        </li>
+        <li>
+          <a href="/contact.html" class="active nav-links font-semibold">Contact</a>
+        </li>
+      </ul>
+      <div id="search-bar" class="flex justify-end items-center">
+        <div
+          class="wrapper border border-black rounded-full flex items-center px-4 py-2"
+        >
+          <input type="text" placeholder="Search..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      
+      <div id="ham-icon">
+        <div class="hamburger" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="mobile-nav-container">
+       <ul
+        class="mobile-nav-menu flex justify-around items-center text-black px-4 gap-8"
+      >
+       <div id="mobile-search-bar" class="flex justify-end items-center">
+        <div
+          class="wrapper border border-black rounded-full flex items-center px-4 py-2"
+        >
+          <input type="text" placeholder="Search..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+        <li>
+          <a href="/" class=" nav-links font-semibold">Home</a>
+        </li>
+        <li>
+          <a href="/recipes.html" class="nav-links font-semibold">Recipes</a>
+        </li>
+        <li>
+          <a href="/category.html" class="nav-links font-semibold"
+            >Categories</a
+          >
+        </li>
+        <li>
+          <a href="/about.html" class="nav-links font-semibold">About</a>
+        </li>
+        <li>
+          <a href="/contact.html" class="active nav-links font-semibold">Contact</a>
+        </li>
+      </ul>
+      </div>
+
+    </nav>
+
+    <!-- Contact Section -->
+    <main class="max-w-2xl mx-auto py-16 px-4">
+      <h1 class="text-3xl font-bold text-gray-800 mb-4">
+        Contact Cook It Yourself
+      </h1>
+      <p class="text-gray-600 text-base mb-8 leading-relaxed">
+        Have a question, suggestion, or just want to say hello? Fill out the
+        form below and we'll get back to you soon!
+      </p>
+    </main>
+
+    <!-- Contact Form Section -->
+    <section class="max-w-lg mx-auto mt-0 mb-20 px-4">
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <h2 class="text-2xl font-bold text-yellow-700 mb-6 text-center">
+          Contact Us
+        </h2>
+        <form class="space-y-5">
+          <div>
+            <label class="block text-gray-700 font-semibold mb-1" for="name"
+              >Name</label
+            >
+            <div class="relative">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full border border-gray-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-300 transition"
+                placeholder="Your Name"
+              />
+              <span class="absolute right-3 top-2.5 text-yellow-400"
+                ><i class="fa fa-user"></i
+              ></span>
+            </div>
+          </div>
+          <div>
+            <label class="block text-gray-700 font-semibold mb-1" for="email"
+              >Email</label
+            >
+            <div class="relative">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full border border-gray-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-300 transition"
+                placeholder="you@email.com"
+              />
+              <span class="absolute right-3 top-2.5 text-yellow-400"
+                ><i class="fa fa-envelope"></i
+              ></span>
+            </div>
+          </div>
+          <div>
+            <label class="block text-gray-700 font-semibold mb-1" for="message"
+              >Message</label
+            >
+            <div class="relative">
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                class="w-full border border-gray-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-300 transition resize-none"
+                placeholder="Type your message..."
+              ></textarea>
+              <span class="absolute right-3 top-2.5 text-yellow-400"
+                ><i class="fa fa-comment"></i
+              ></span>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 rounded-lg shadow transition text-lg mt-2"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+      <!-- Footer Section -->
+    <footer class="footer-section bg-gray-800 text-white pt-12 pb-6 mt-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="footer-content">
+          <div class="footer-section-main">
+            <div class="footer-logo">
+              <span
+                class="text-3xl font-bold border-2 border-white rounded-full px-6 py-3"
+              >
+                Cook It Yourself
+              </span>
+              <p class="mt-4 text-gray-300 max-w-md">
+                Your ultimate destination for delicious recipes, cooking tips,
+                and culinary inspiration.
+              </p>
+            </div>
+
+            <div class="footer-social">
+              <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+              <div class="social-icons">
+                <a href="#" class="social-icon">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="/index.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/recipes.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Recipes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/category.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Categories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/about.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >About</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4 class="text-lg font-bold mb-4">Categories</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Breakfast</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Lunch</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Dinner</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Snacks</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4 class="text-lg font-bold mb-4">Support</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="/contact.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Contact Us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >FAQ</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Terms of Service</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            <p>
+              &copy; <span id="footer-year"></span> Cook It Yourself. All rights
+              reserved.
+            </p>
+          </div>
+          <div class="footer-newsletter">
+            <h4 class="text-lg font-bold mb-2">Subscribe to our newsletter</h4>
+            <div class="newsletter-form">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="newsletter-input"
+              />
+              <button class="newsletter-button">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Developer Tag -->
+    <a
+      href="https://github.com/Abhishek7242"
+      target="_blank"
+      title="Abhishek Verma (GitHub)"
+      class="fixed bottom-6 right-6 z-50 flex flex-col items-center group"
+    >
+      <img
+        src="./Profile_Image.png"
+        alt="Abhishek Verma"
+        class="w-16 h-16 rounded-full border-4 border-orange-400 shadow-lg transition-transform transform group-hover:scale-110 bg-white"
+      />
+      <span
+        class="mt-2 px-3 bg-black py-1 bg-orange-400 text-white text-xs font-bold rounded-full shadow-lg opacity-90 group-hover:opacity-100 transition-opacity select-none"
+      >
+        Developer
+      </span>
+    </a>
+
+    <script>
+      // Set current year in footer
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("footer-year").textContent =
+          new Date().getFullYear();
+
+        // Add click handlers for category cards
+        const categoryButtons = document.querySelectorAll(".card-button");
+        categoryButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const categoryName =
+              this.parentElement.querySelector(".card-title").textContent;
+            alert(
+              `Exploring ${categoryName} recipes! This would navigate to the category page.`
+            );
+          });
+        });
+      });
+    </script>
+    <script src="./navbar.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cook It Yourself</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./home-intro.css" />
+    <link rel="stylesheet" href="./recipes-intro.css" />
+    <link rel="stylesheet" href="./home-recipes.css" />
+    <link rel="stylesheet" href="./recipes-find-recipes.css" />
+    <link rel="stylesheet" href="./home-categories.css" />
+    <link rel="stylesheet" href="./recipes-best-recipes.css" />
+    <link rel="stylesheet" href="./recipes-top-recipes.css" />
+    <link rel="stylesheet" href="./footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./recipes/find-recipes.css" />
+  </head>
+
+  <body>
+    <nav id="navbar" class="flex justify-evenly items-center bg-white p-4">
+      <!-- <div class="image-container">
+
+                <img class="" src="./0ca372d8-daad-4864-8cbf-92464e3d295a (1).png" alt="">
+            </div> -->
+      <div class="logo-container flex items-center justify-center">
+        <a
+          href="#"
+          class="rounded-full border-2 border-black p-4 font-bold px-6 shadow"
+          >Cook It Yourself</a
+        >
+      </div>
+      <ul
+        class="nav-menu flex justify-around items-center text-black px-4 gap-8"
+      >
+        <li>
+          <a href="/" class=" nav-links font-semibold">Home</a>
+        </li>
+        <li>
+          <a href="/recipes.html" class="active nav-links font-semibold">Recipes</a>
+        </li>
+        <li>
+          <a href="/category.html" class="nav-links font-semibold"
+            >Categories</a
+          >
+        </li>
+        <li>
+          <a href="/about.html" class="nav-links font-semibold">About</a>
+        </li>
+        <li>
+          <a href="/contact.html" class="nav-links font-semibold">Contact</a>
+        </li>
+      </ul>
+      <div id="search-bar" class="flex justify-end items-center">
+        <div
+          class="wrapper border border-black rounded-full flex items-center px-4 py-2"
+        >
+          <input type="text" placeholder="Search..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      
+      <div id="ham-icon">
+        <div class="hamburger" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="mobile-nav-container">
+       <ul
+        class="mobile-nav-menu flex justify-around items-center text-black px-4 gap-8"
+      >
+       <div id="mobile-search-bar" class="flex justify-end items-center">
+        <div
+          class="wrapper border border-black rounded-full flex items-center px-4 py-2"
+        >
+          <input type="text" placeholder="Search..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+        <li>
+          <a href="#intro" class=" nav-links font-semibold">Home</a>
+        </li>
+        <li>
+          <a href="/recipes.html" class="active nav-links font-semibold">Recipes</a>
+        </li>
+        <li>
+          <a href="/category.html" class="nav-links font-semibold"
+            >Categories</a
+          >
+        </li>
+        <li>
+          <a href="/about.html" class="nav-links font-semibold">About</a>
+        </li>
+        <li>
+          <a href="/contact.html" class="nav-links font-semibold">Contact</a>
+        </li>
+      </ul>
+      </div>
+
+    </nav>
+
+    <!-- intro section -->
+
+    <section id="intro" class="px-10 mt-2">
+      <div
+        class="flex justify-between items-end bg-gray-100 rounded-2xl shadow-lg overflow-hidden"
+      >
+        <div
+          class="intro-text flex flex-col items-center justify-center h-screen text-white gap-4 px-9 ml-9"
+        >
+          <h1 class="text-5xl font-bold mb-6">Explore Recipes</h1>
+          <p
+            class="text-yellow-600 text-4xl md:text-4xl font-extrabold flex items-center gap-2 animate-bounce"
+          >
+            Taste the Magic <span class="text-3xl md:text-4xl">🍽️</span>
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://www.freeiconspng.com/uploads/spices-for-recipe-png-13.png"
+            alt="Intro Image"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- intro section -->
+
+    <!-- find recipes section -->
+    <section id="find-recipes">
+      <div class="find-recipes-container">
+        <div class="find-recipes-title">Find Your Perfect Recipe</div>
+        <form class="find-recipes-form">
+          <input type="text" placeholder="Search by name or ingredient..." />
+          <select>
+            <option>All Categories</option>
+            <option>Breakfast</option>
+            <option>Lunch</option>
+            <option>Dinner</option>
+            <option>Snacks</option>
+            <option>Desserts</option>
+            <option>Drinks</option>
+          </select>
+          <select>
+            <option>All Difficulty</option>
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+          </select>
+          <button type="button" class="find-recipes-btn">Find Recipes</button>
+        </form>
+        <div class="find-recipes-results">
+          <!-- Example Recipe Card -->
+          <div class="find-recipes-card">
+            <img
+              src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/04/mango-lassi-recipe.jpg"
+              alt="Mango Lassi"
+           
+            />
+            <div class="find-recipes-card-title">Mango Lassi</div>
+            <div class="find-recipes-card-desc">
+              A refreshing yogurt-based drink with ripe mangoes and a hint of
+              cardamom.
+            </div>
+            <div class="find-recipes-card-tags">
+              <span class="find-recipes-card-tag">Drinks</span>
+              <span class="find-recipes-card-tag">Easy</span>
+            </div>
+          </div>
+          <div class="find-recipes-card">
+            <img
+              src="https://www.indianveggiedelight.com/wp-content/uploads/2021/08/air-fryer-paneer-tikka-featured.jpg"
+              alt="Paneer Tikka"
+           
+            />
+            <div class="find-recipes-card-title">Paneer Tikka</div>
+            <div class="find-recipes-card-desc">
+              Grilled paneer cubes marinated in spices, perfect as a starter or
+              snack.
+            </div>
+            <div class="find-recipes-card-tags">
+              <span class="find-recipes-card-tag">Snacks</span>
+              <span class="find-recipes-card-tag">Medium</span>
+            </div>
+          </div>
+          <div class="find-recipes-card">
+            <img
+              src="https://simplegreensmoothies.com/wp-content/uploads/chocolate-vegan-mug-cake-recipe-featuredimage.jpg"
+              alt="Chocolate Mug Cake"
+           
+            />
+            <div class="find-recipes-card-title">Chocolate Mug Cake</div>
+            <div class="find-recipes-card-desc">
+              A quick, single-serve chocolate cake made in the microwave in just
+              2 minutes.
+            </div>
+            <div class="find-recipes-card-tags">
+              <span class="find-recipes-card-tag">Desserts</span>
+              <span class="find-recipes-card-tag">Easy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- find recipes section -->
+
+    <!-- recipes section -->
+    <section
+      id="recipes"
+      class="flex i flex-col justify-evenly items-center pt-14"
+    >
+      <div class="flex flex-col items-center flax-col gap-4">
+        <h2 class="text-5xl font-bold">Unlock Your Inner <span>Chef</span></h2>
+        <p class="text-5xl font-bold text-center">
+          with Our <span>Recipes</span>
+        </p>
+      </div>
+      <div
+        class="recipes-list pt-14 flex flex-wrap justify-center items-center gap-8"
+      >
+        <a
+          class="recipe-item flex flex-col items-start justify-center gap-2 relative rounded-lg overflow-hidden shadow-lg"
+        >
+          <img
+            class=""
+            src="https://img.freepik.com/free-photo/close-up-man-s-hand-cutting-red-bellpepper-with-sharp-knife-chopping-board_23-2148120454.jpg?semt=ais_hybrid&w=740"
+            alt=""
+          />
+          <span class="bg-white absolute rounded-full border px-3 py-1"
+            >Easy Recipes</span
+          >
+        </a>
+        <a
+          class="recipe-item flex flex-col items-start justify-center gap-2 relative rounded-lg overflow-hidden shadow-lg"
+        >
+          <img
+            class=""
+            src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/06/paneer-sandwich.jpg"
+            alt=""
+          />
+          <span class="bg-white absolute rounded-full border px-3 py-1"
+            >Instant Recipes</span
+          >
+        </a>
+        <a
+          class="recipe-item flex flex-col items-start justify-center gap-2 relative rounded-lg overflow-hidden shadow-lg"
+        >
+          <img
+            class=""
+            src="https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/spicy_salmon_bite_rice_16300_16x9.jpg"
+            alt=""
+          />
+          <span class="bg-white absolute rounded-full border px-3 py-1"
+            >Healthy Recipes</span
+          >
+        </a>
+        <a
+          class="recipe-item flex flex-col items-start justify-center gap-2 relative rounded-lg overflow-hidden shadow-lg"
+        >
+          <img
+            class=""
+            src="https://hips.hearstapps.com/hmg-prod/images/comfort-food-recipes-chicken-pot-pie-soup-66d9e96824766.jpg?crop=1xw:1xh;center,top&resize=980:*"
+            alt=""
+          />
+          <span class="bg-white absolute rounded-full border px-3 py-1"
+            >Comfort Recipes</span
+          >
+        </a>
+        <a
+          class="recipe-item flex flex-col items-start justify-center gap-2 relative rounded-lg overflow-hidden shadow-lg"
+        >
+          <img
+            class=""
+            src="https://www.eatingwell.com/thmb/8eyT0zTaRaeTKo6-R8aAXB2Mpes=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/buffalo-cauliflower-grain-bowl-beauty-square-a23741fab1694775866fa396755b4e32.jpg"
+            alt=""
+          />
+          <span class="bg-white absolute rounded-full border px-3 py-1"
+            >Protein Recipes</span
+          >
+        </a>
+      </div>
+    </section>
+    <!-- recipes section -->
+
+<!-- top recipes section -->
+ <section id="top-recipes" class="">
+    <h2>Our <span>Top</span> Recipes</h2>
+<div class="top-recipes-container flex flex-wrap justify-center items-center gap-8">
+<!-- Recipe 1: Paneer Butter Masala -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://myfoodstory.com/wp-content/uploads/2021/07/restaurant-style-paneer-butter-masala-2-500x500.jpg"
+    alt="Paneer Butter Masala"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Paneer Butter Masala</p>
+    <p class="text-md">Creamy and rich North Indian curry with paneer cubes in buttery tomato gravy.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 rounded-xl text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">
+      <i class="fa-solid fa-eye mr-1 text-gray-500"></i>1.2k+
+    </span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Step by Step Guide</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Restaurant Style</span>
+  </div>
+</div>
+
+<!-- Recipe 2: Chole (Chickpea Curry) -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://vegecravings.com/wp-content/uploads/2017/01/chole-recipe-step-by-step-instructions-13.jpg"
+    alt="Chole"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Chole</p>
+    <p class="text-md">Spiced chickpea curry cooked with onion-tomato base, a North Indian favorite.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 rounded-xl text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">
+      <i class="fa-solid fa-eye mr-1 text-gray-500"></i>980+
+    </span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">One-Pot</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Vegan</span>
+  </div>
+</div>
+
+<!-- Recipe 3: Vegetable Biryani -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://j6e2i8c9.delivery.rocketcdn.me/wp-content/uploads/2019/01/Shahi-Veg-Biryani-Recipe-01.jpg"
+    alt="Veg Biryani"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Veg Biryani</p>
+    <p class="text-md">Fragrant basmati rice with mixed vegetables and aromatic spices.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 rounded-xl text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">
+      <i class="fa-solid fa-eye mr-1 text-gray-500"></i>870+
+    </span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Festive Special</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Vegan Option</span>
+  </div>
+</div>
+
+<!-- Recipe 4: Aloo Gobi -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://shwetainthekitchen.com/wp-content/uploads/2024/01/aloo-gobi.jpg"
+    alt="Aloo Gobi"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Aloo Gobi</p>
+    <p class="text-md">Dry curry of potatoes and cauliflower with Indian spices, easy and comforting.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 rounded-xl text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">
+      <i class="fa-solid fa-eye mr-1 text-gray-500"></i>750+
+    </span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Quick & Easy</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Gluten-Free</span>
+  </div>
+</div>
+
+<!-- Recipe 5: Masala Dosa -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://www.cookwithmanali.com/wp-content/uploads/2020/05/Masala-Dosa.jpg"
+    alt="Masala Dosa"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Masala Dosa</p>
+    <p class="text-md">Crispy rice crepes filled with spiced potato masala, a South Indian classic.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 rounded-xl text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">
+      <i class="fa-solid fa-eye mr-1 text-gray-500"></i>1.5k+
+    </span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Traditional</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Vegan-Friendly</span>
+  </div>
+</div>
+
+<!-- Recipe 6: Palak Paneer -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://www.indianveggiedelight.com/wp-content/uploads/2017/10/palak-paneer-recipe-featured.jpg"
+    alt="Palak Paneer"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Palak Paneer</p>
+    <p class="text-md">Soft paneer cubes simmered in creamy spinach gravy with Indian spices.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 rounded-xl text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">
+      <i class="fa-solid fa-eye mr-1 text-gray-500"></i>1.1k+
+    </span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Healthy</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Iron Rich</span>
+  </div>
+</div>
+
+<!-- Recipe 7: Dhokla -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://shwetainthekitchen.com/wp-content/uploads/2023/04/instant-khaman-dhokla-recipe.jpg"
+    alt="Dhokla"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Dhokla</p>
+    <p class="text-md">Steamed savory snack from Gujarat, made with gram flour and tempered spices.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 rounded-xl text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">
+      <i class="fa-solid fa-eye mr-1 text-gray-500"></i>690+
+    </span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Steamed</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Gluten-Free</span>
+  </div>
+</div>
+
+<!-- Recipe 8: Rajma Masala -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://www.indianveggiedelight.com/wp-content/uploads/2020/02/instant-pot-rajma-masala-featured.jpg"
+    alt="Rajma Masala"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Rajma Masala</p>
+    <p class="text-md">Red kidney beans cooked in spiced tomato-onion gravy, best with rice.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 rounded-xl text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">
+      <i class="fa-solid fa-eye mr-1 text-gray-500"></i>800+
+    </span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Comfort Food</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Protein Rich</span>
+  </div>
+</div>
+
+  
+</div>
+ </section>
+<!-- top recipes section -->
+
+    <!-- best-recipes section -->
+    <section
+      id="best-recipes"
+      class="bg-gray-100 py-12 mt-12 flex flex-col items-center"
+    >
+      <h2 class="text-4xl font-semibold mb-10 text-center">
+        Our <span class="text-yellow-500 font-bold">Best</span>
+        <span class="text-black">Recipes</span>
+      </h2>
+      <div
+        class="flex gap-9 flex-wrap justify-center items-center"
+      >
+      <!-- Recipe 1: Margherita Pizza (Italy) -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg"
+    alt="Margherita Pizza"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Margherita Pizza</p>
+    <p class="text-md">Classic Italian pizza with fresh tomatoes, mozzarella, and basil on thin crust.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full"><i class="fa-solid fa-eye mr-1"></i>1.8k+</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Wood-Fired</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Italian</span>
+  </div>
+</div>
+
+<!-- Recipe 2: Thai Green Curry (Thailand) -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://www.connoisseurusveg.com/wp-content/uploads/2022/05/vegan-green-curry-22-sq.jpg"
+    alt="Thai Green Curry"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Thai Green Curry</p>
+    <p class="text-md">A spicy coconut milk curry loaded with veggies, Thai basil, and green curry paste.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full"><i class="fa-solid fa-eye mr-1"></i>950+</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Spicy</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Thai Cuisine</span>
+  </div>
+</div>
+
+<!-- Recipe 3: Falafel Wrap (Middle East) -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://static.toiimg.com/photo/62708678.cms"
+    alt="Falafel Wrap"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Falafel Wrap</p>
+    <p class="text-md">Crispy chickpea patties in pita bread with hummus, veggies, and tahini sauce.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full"><i class="fa-solid fa-eye mr-1"></i>1.3k+</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Vegan</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Street Food</span>
+  </div>
+</div>
+
+<!-- Recipe 4: Veggie Sushi Rolls (Japan) -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://foodbyjonister.com/wp-content/uploads/2018/02/IMG_5906.jpg"
+    alt="Veggie Sushi Rolls"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Veggie Sushi Rolls</p>
+    <p class="text-md">Japanese-style rolls filled with avocado, cucumber, carrots, and rice.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full"><i class="fa-solid fa-eye mr-1"></i>700+</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">No Fish</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Healthy</span>
+  </div>
+</div>
+
+<!-- Recipe 5: Ratatouille (France) -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://www.howtocook.recipes/wp-content/uploads/2021/05/Ratatouille-recipe.jpg"
+    alt="Ratatouille"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Ratatouille</p>
+    <p class="text-md">A slow-cooked French stew of eggplant, zucchini, bell peppers, and tomatoes.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full"><i class="fa-solid fa-eye mr-1"></i>880+</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Gluten-Free</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">French</span>
+  </div>
+</div>
+
+<!-- Recipe 6: Mexican Bean Tacos (Mexico) -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://www.cookingclassy.com/wp-content/uploads/2017/02/black-bean-tacos-11.jpg"
+    alt="Mexican Bean Tacos"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Mexican Bean Tacos</p>
+    <p class="text-md">Soft or crispy tacos filled with spicy black beans, salsa, avocado, and lettuce.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full"><i class="fa-solid fa-eye mr-1"></i>1k+</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Vegan</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Mexican</span>
+  </div>
+</div>
+
+<!-- Recipe 7: Greek Spanakopita (Greece) -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://howtofeedaloon.com/wp-content/uploads/2023/01/spanakopita-IG-500x500.jpg"
+    alt="Spanakopita"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Spanakopita</p>
+    <p class="text-md">Flaky filo pastry filled with spinach, feta, and herbs – a Greek classic.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full"><i class="fa-solid fa-eye mr-1"></i>600+</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Savory Pie</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Greek</span>
+  </div>
+</div>
+
+<!-- Recipe 8: Korean Bibimbap (Korea) -->
+<div class="top-recipes-card relative">
+  <img
+    src="https://cdn.loveandlemons.com/wp-content/uploads/2020/03/bibimbap.jpg"
+    alt="Bibimbap"
+    class="w-full h-auto rounded-xl shadow-lg"
+  />
+  <div class="text absolute left-4 p-3 rounded-xl text-white max-w-sm">
+    <p class="block text-lg font-bold mb-1">Bibimbap</p>
+    <p class="text-md">A vibrant Korean rice bowl topped with sautéed vegetables, egg, and gochujang sauce.</p>
+  </div>
+  <div class="tags absolute left-4 bottom-2 flex gap-1 flex-wrap p-3 text-white">
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full"><i class="fa-solid fa-eye mr-1"></i>1.1k+</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Korean</span>
+    <span class="bg-white p-2 px-4 text-gray-500 rounded-full">Customizable</span>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </section>
+    <!-- best-recipes section -->
+
+    <!-- tips-and-tricks section -->
+    <section id="tips-tricks" class="py-16 px-4 max-w-7xl mx-auto">
+      <h2 class="text-4xl font-bold mb-12 text-center text-gray-800">
+        🍳 Cooking Tips & Tricks
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Tip 1 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <i class="fas fa-leaf text-green-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Use Fresh Ingredients</h3>
+          <p class="text-gray-600 text-center">
+            Fresh ingredients bring better flavor and nutrition. Shop local and
+            seasonal for the best results.
+          </p>
+        </div>
+
+        <!-- Tip 2 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <i class="fas fa-fire text-red-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Preheat Your Pan</h3>
+          <p class="text-gray-600 text-center">
+            Always heat your pan before adding food. It helps with even cooking
+            and prevents sticking.
+          </p>
+        </div>
+
+        <!-- Tip 3 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <i class="fas fa-balance-scale text-yellow-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Measure Ingredients</h3>
+          <p class="text-gray-600 text-center">
+            Precise measurements lead to consistent results, especially in
+            baking or complex recipes.
+          </p>
+        </div>
+
+        <!-- Tip 4 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <i class="fas fa-clock text-blue-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Let Flavors Marinate</h3>
+          <p class="text-gray-600 text-center">
+            Allowing ingredients to rest or marinate helps deepen flavors and
+            improve the final taste.
+          </p>
+        </div>
+
+        <!-- Tip 5 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <i class="fas fa-utensils text-purple-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Don’t Overcrowd the Pan</h3>
+          <p class="text-gray-600 text-center">
+            Crowding lowers the temperature and causes steaming instead of
+            searing. Give your food space to breathe!
+          </p>
+        </div>
+
+        <!-- Tip 6 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200"
+        >
+          <i class="fas fa-tint text-teal-500 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Season As You Go</h3>
+          <p class="text-gray-600 text-center">
+            Build layers of flavor by seasoning throughout the cooking
+            process—not just at the end.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- tips-and-tricks section -->
+
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+    <footer class="footer-section bg-gray-800 text-white pt-12 pb-6 mt-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="footer-content">
+          <div class="footer-section-main">
+            <div class="footer-logo">
+              <span
+                class="text-3xl font-bold border-2 border-white rounded-full px-6 py-3"
+              >
+                Cook It Yourself
+              </span>
+              <p class="mt-4 text-gray-300 max-w-md">
+                Your ultimate destination for delicious recipes, cooking tips,
+                and culinary inspiration.
+              </p>
+            </div>
+
+            <div class="footer-social">
+              <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+              <div class="social-icons">
+                <a href="#" class="social-icon">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="/index.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/recipes.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Recipes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/category.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Categories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/about.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >About</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4 class="text-lg font-bold mb-4">Categories</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Breakfast</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Lunch</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Dinner</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Snacks</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4 class="text-lg font-bold mb-4">Support</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="/contact.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Contact Us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >FAQ</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Terms of Service</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            <p>
+              &copy; <span id="footer-year"></span> Cook It Yourself. All rights
+              reserved.
+            </p>
+          </div>
+          <div class="footer-newsletter">
+            <h4 class="text-lg font-bold mb-2">Subscribe to our newsletter</h4>
+            <div class="newsletter-form">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="newsletter-input"
+              />
+              <button class="newsletter-button">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Developer Tag -->
+    <a
+      href="https://github.com/Abhishek7242"
+      target="_blank"
+      title="Abhishek Verma (GitHub)"
+      class="fixed bottom-6 right-6 z-50 flex flex-col items-center group"
+    >
+      <img
+        src="./Profile_Image.png"
+        alt="Abhishek Verma"
+        class="w-16 h-16 rounded-full border-4 border-orange-400 shadow-lg transition-transform transform group-hover:scale-110 bg-white"
+      />
+      <span
+        class="mt-2 px-3 bg-black py-1 bg-orange-400 text-white text-xs font-bold rounded-full shadow-lg opacity-90 group-hover:opacity-100 transition-opacity select-none"
+      >
+        Developer
+      </span>
+    </a>
+
+    <script>
+      // Set current year in footer
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("footer-year").textContent =
+          new Date().getFullYear();
+
+        // Add click handlers for category cards
+        const categoryButtons = document.querySelectorAll(".card-button");
+        categoryButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const categoryName =
+              this.parentElement.querySelector(".card-title").textContent;
+            alert(
+              `Exploring ${categoryName} recipes! This would navigate to the category page.`
+            );
+          });
+        });
+      });
+    </script>
+    <script src="./navbar.js"></script>
+    
+  </body>
+</html>

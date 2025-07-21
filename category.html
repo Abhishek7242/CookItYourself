@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categories - Cook It Yourself</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./categories-intro.css" />
+    <link rel="stylesheet" href="./categories-grid.css" />
+    <link rel="stylesheet" href="./categories-featured-recipes.css" />
+    <link rel="stylesheet" href="./footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav id="navbar" class="flex justify-evenly items-center bg-white p-4">
+      <!-- <div class="image-container">
+
+                <img class="" src="./0ca372d8-daad-4864-8cbf-92464e3d295a (1).png" alt="">
+            </div> -->
+      <div class="logo-container flex items-center justify-center">
+        <a
+          href="#"
+          class="rounded-full border-2 border-black p-4 font-bold px-6 shadow"
+          >Cook It Yourself</a
+        >
+      </div>
+      <ul
+        class="nav-menu flex justify-around items-center text-black px-4 gap-8"
+      >
+        <li>
+          <a href="/" class=" nav-links font-semibold">Home</a>
+        </li>
+        <li>
+          <a href="/recipes.html" class="nav-links font-semibold">Recipes</a>
+        </li>
+        <li>
+          <a href="/category.html" class="active nav-links font-semibold"
+            >Categories</a
+          >
+        </li>
+        <li>
+          <a href="/about.html" class="nav-links font-semibold">About</a>
+        </li>
+        <li>
+          <a href="/contact.html" class="nav-links font-semibold">Contact</a>
+        </li>
+      </ul>
+      <div id="search-bar" class="flex justify-end items-center">
+        <div
+          class="wrapper border border-black rounded-full flex items-center px-4 py-2"
+        >
+          <input type="text" placeholder="Search..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      
+      <div id="ham-icon">
+        <div class="hamburger" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="mobile-nav-container">
+       <ul
+        class="mobile-nav-menu flex justify-around items-center text-black px-4 gap-8"
+      >
+       <div id="mobile-search-bar" class="flex justify-end items-center">
+        <div
+          class="wrapper border border-black rounded-full flex items-center px-4 py-2"
+        >
+          <input type="text" placeholder="Search..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+        <li>
+          <a href="/" class=" nav-links font-semibold">Home</a>
+        </li>
+        <li>
+          <a href="/recipes.html" class="nav-links font-semibold">Recipes</a>
+        </li>
+        <li>
+          <a href="/category.html" class="active nav-links font-semibold"
+            >Categories</a
+          >
+        </li>
+        <li>
+          <a href="/about.html" class="nav-links font-semibold">About</a>
+        </li>
+        <li>
+          <a href="/contact.html" class="nav-links font-semibold">Contact</a>
+        </li>
+      </ul>
+      </div>
+
+    </nav>
+    <!-- intro section -->
+
+    <section id="intro" class="px-10 mt-2">
+      <div
+        class="flex justify-between items-end bg-gray-100 rounded-2xl shadow-lg overflow-hidden"
+      >
+        <div
+          class="intro-text flex flex-col items-center justify-center text-white gap-6 px-9 ml-9"
+        >
+          <h1 class="text-5xl font-bold">Explore Recipe Categories</h1>
+
+          <p class="intro-description">
+            Discover a world of culinary possibilities with our carefully
+            curated recipe collections. From quick weekday meals to weekend
+            feasts, we've organized everything to make your cooking journey
+            effortless and enjoyable.
+          </p>
+
+          <div class="intro-features">
+            <span><i class="fas fa-fire mr-2"></i>Popular Categories</span>
+            <span><i class="fas fa-clock mr-2"></i>Quick Recipes</span>
+            <span><i class="fas fa-star mr-2"></i>Chef's Picks</span>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://www.pngall.com/wp-content/uploads/8/Cooking-Recipe-PNG-Download-Image.png"
+            alt="Intro Image"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Categories Grid -->
+    <main class="max-w-7xl mx-auto px-4 py-12">
+      <!-- Meal Type Categories -->
+      <section class="categories-section mb-16">
+        <div class="section-header text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Meal Types</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Browse recipes by when you want to enjoy them - from morning energy
+            boosters to cozy evening meals.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <div class="category-card breakfast-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=400&h=300&fit=crop"
+                alt="Breakfast"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-sun text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Breakfast</h3>
+              <p class="card-description">
+                Start your day with energy-packed morning meals
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 45+ Recipes</span>
+                <span><i class="fas fa-clock"></i> 15-30 min</span>
+              </div>
+              <button class="card-button">Explore Breakfast</button>
+            </div>
+          </div>
+
+          <div class="category-card lunch-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop"
+                alt="Lunch"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-cloud-sun text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Lunch</h3>
+              <p class="card-description">
+                Midday meals that keep you going strong
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 62+ Recipes</span>
+                <span><i class="fas fa-clock"></i> 20-45 min</span>
+              </div>
+              <button class="card-button">Explore Lunch</button>
+            </div>
+          </div>
+
+          <div class="category-card dinner-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop"
+                alt="Dinner"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-moon text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Dinner</h3>
+              <p class="card-description">
+                Satisfying evening meals for the whole family
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 78+ Recipes</span>
+                <span><i class="fas fa-clock"></i> 30-60 min</span>
+              </div>
+              <button class="card-button">Explore Dinner</button>
+            </div>
+          </div>
+
+          <div class="category-card snacks-card">
+            <div class="card-image">
+              <img
+                src="https://www.simplyrecipes.com/thmb/Ceanry5BoHUias_z7n6V1kxi7qM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Last-Minute-Party-Snacks-LEAD-fc343b669f8049c6a476af00f97502b6.jpg"
+                alt="Snacks"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-cookie-bite text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Snacks & Appetizers</h3>
+              <p class="card-description">Quick bites and party favorites</p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 35+ Recipes</span>
+                <span><i class="fas fa-clock"></i> 10-25 min</span>
+              </div>
+              <button class="card-button">Explore Snacks</button>
+            </div>
+          </div>
+
+          <div class="category-card desserts-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop"
+                alt="Desserts"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-ice-cream text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Desserts & Sweets</h3>
+              <p class="card-description">
+                Indulgent treats and sweet delights
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 52+ Recipes</span>
+                <span><i class="fas fa-clock"></i> 20-45 min</span>
+              </div>
+              <button class="card-button">Explore Desserts</button>
+            </div>
+          </div>
+
+          <div class="category-card beverages-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1546173159-315724a31696?w=400&h=300&fit=crop"
+                alt="Beverages"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-glass-martini-alt text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Beverages & Drinks</h3>
+              <p class="card-description">Refreshing drinks and cocktails</p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 28+ Recipes</span>
+                <span><i class="fas fa-clock"></i> 5-15 min</span>
+              </div>
+              <button class="card-button">Explore Beverages</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cuisine Categories -->
+      <section class="categories-section mb-16">
+        <div class="section-header text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">World Cuisines</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Travel the world through flavors - from traditional Italian pasta to
+            spicy Indian curries.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <div class="category-card italian-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop"
+                alt="Italian"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-pizza-slice text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Italian</h3>
+              <p class="card-description">
+                Authentic pasta, pizza, and Mediterranean flavors
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 28+ Recipes</span>
+                <span><i class="fas fa-star"></i> 4.8/5</span>
+              </div>
+              <button class="card-button">Explore Italian</button>
+            </div>
+          </div>
+
+          <div class="category-card indian-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop"
+                alt="Indian"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-pepper-hot text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Indian</h3>
+              <p class="card-description">
+                Spicy curries, aromatic rice, and fresh breads
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 42+ Recipes</span>
+                <span><i class="fas fa-star"></i> 4.9/5</span>
+              </div>
+              <button class="card-button">Explore Indian</button>
+            </div>
+          </div>
+
+          <div class="category-card mexican-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&h=300&fit=crop"
+                alt="Mexican"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-taco text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Mexican</h3>
+              <p class="card-description">
+                Tacos, enchiladas, and vibrant Latin flavors
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 31+ Recipes</span>
+                <span><i class="fas fa-star"></i> 4.7/5</span>
+              </div>
+              <button class="card-button">Explore Mexican</button>
+            </div>
+          </div>
+
+          <div class="category-card asian-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop"
+                alt="Asian"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-dragon text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Asian</h3>
+              <p class="card-description">
+                Chinese, Thai, Japanese, and Korean delights
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 56+ Recipes</span>
+                <span><i class="fas fa-star"></i> 4.8/5</span>
+              </div>
+              <button class="card-button">Explore Asian</button>
+            </div>
+          </div>
+
+          <div class="category-card mediterranean-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop"
+                alt="Mediterranean"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-fish text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Mediterranean</h3>
+              <p class="card-description">
+                Fresh seafood, olive oil, and healthy flavors
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 34+ Recipes</span>
+                <span><i class="fas fa-star"></i> 4.9/5</span>
+              </div>
+              <button class="card-button">Explore Mediterranean</button>
+            </div>
+          </div>
+
+          <div class="category-card french-card">
+            <div class="card-image">
+              <img
+                src="https://www.institutescoffier.com/wp-content/uploads/2023/12/mastering-the-art-of-french-cooking.webp"
+                alt="French"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-cheese text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">French</h3>
+              <p class="card-description">
+                Elegant cuisine with rich sauces and techniques
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 29+ Recipes</span>
+                <span><i class="fas fa-star"></i> 4.7/5</span>
+              </div>
+              <button class="card-button">Explore French</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dietary Categories -->
+      <section class="categories-section mb-16">
+        <div class="section-header text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Dietary Preferences
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Find recipes that fit your lifestyle - whether you're vegetarian,
+            vegan, or following specific diets.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <div class="category-card vegetarian-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop"
+                alt="Vegetarian"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-leaf text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Vegetarian</h3>
+              <p class="card-description">
+                Plant-based meals full of flavor and nutrition
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 89+ Recipes</span>
+                <span><i class="fas fa-heart"></i> Healthy</span>
+              </div>
+              <button class="card-button">Explore Vegetarian</button>
+            </div>
+          </div>
+
+          <div class="category-card vegan-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop"
+                alt="Vegan"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-seedling text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Vegan</h3>
+              <p class="card-description">
+                100% plant-based recipes for everyone
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 67+ Recipes</span>
+                <span><i class="fas fa-leaf"></i> Eco-friendly</span>
+              </div>
+              <button class="card-button">Explore Vegan</button>
+            </div>
+          </div>
+
+          <div class="category-card gluten-free-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&h=300&fit=crop"
+                alt="Gluten Free"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-wheat-awn text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Gluten-Free</h3>
+              <p class="card-description">
+                Delicious recipes without gluten ingredients
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 43+ Recipes</span>
+                <span><i class="fas fa-shield-alt"></i> Safe</span>
+              </div>
+              <button class="card-button">Explore Gluten-Free</button>
+            </div>
+          </div>
+
+          <div class="category-card keto-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=400&h=300&fit=crop"
+                alt="Keto"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-fire text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Keto</h3>
+              <p class="card-description">
+                Low-carb, high-fat recipes for ketogenic diet
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 38+ Recipes</span>
+                <span><i class="fas fa-bolt"></i> Energy</span>
+              </div>
+              <button class="card-button">Explore Keto</button>
+            </div>
+          </div>
+
+          <div class="category-card low-carb-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&h=300&fit=crop"
+                alt="Low-Carb"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-apple-alt text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Low-Carb</h3>
+              <p class="card-description">
+                Healthy meals with reduced carbohydrate content
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 41+ Recipes</span>
+                <span><i class="fas fa-heart"></i> Healthy</span>
+              </div>
+              <button class="card-button">Explore Low-Carb</button>
+            </div>
+          </div>
+
+          <div class="category-card paleo-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop"
+                alt="Paleo"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-drumstick-bite text-4xl"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Paleo</h3>
+              <p class="card-description">
+                Ancient diet with whole foods and lean proteins
+              </p>
+              <div class="card-stats">
+                <span><i class="fas fa-utensils"></i> 33+ Recipes</span>
+                <span><i class="fas fa-leaf"></i> Natural</span>
+              </div>
+              <button class="card-button">Explore Paleo</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Recipes Section -->
+      <section class="featured-section p-4">
+        <div class="section-header text-center mb-12 p-4">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Featured Recipes
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Handpicked recipes from our most popular categories to get you
+            started.
+          </p>
+        </div>
+
+        <div class="featured-grid">
+          <div class="featured-card">
+            <div class="featured-image">
+              <img
+                src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=400&h=250&fit=crop"
+                alt="Avocado Toast"
+              />
+              <div class="featured-badge">Breakfast</div>
+            </div>
+            <div class="featured-content">
+              <h3 class="featured-title">Avocado Toast with Poached Eggs</h3>
+              <p class="featured-description">
+                A healthy and delicious start to your day
+              </p>
+              <div class="featured-meta">
+                <span><i class="fas fa-clock"></i> 15 min</span>
+                <span><i class="fas fa-star"></i> 4.9</span>
+                <span><i class="fas fa-heart"></i> 2.3k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-card">
+            <div class="featured-image">
+              <img
+                src="https://familystylefood.com/wp-content/uploads/2020/02/mushroom-linguine-close.jpg"
+                alt="Pasta"
+              />
+              <div class="featured-badge">Italian</div>
+            </div>
+            <div class="featured-content">
+              <h3 class="featured-title">Creamy Mushroom Pasta</h3>
+              <p class="featured-description">
+                Rich and comforting Italian classic
+              </p>
+              <div class="featured-meta">
+                <span><i class="fas fa-clock"></i> 25 min</span>
+                <span><i class="fas fa-star"></i> 4.8</span>
+                <span><i class="fas fa-heart"></i> 1.8k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-card">
+            <div class="featured-image">
+              <img
+                src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=250&fit=crop"
+                alt="Curry"
+              />
+              <div class="featured-badge">Indian</div>
+            </div>
+            <div class="featured-content">
+              <h3 class="featured-title">Butter Chicken Curry</h3>
+              <p class="featured-description">
+                Creamy and aromatic Indian favorite
+              </p>
+              <div class="featured-meta">
+                <span><i class="fas fa-clock"></i> 45 min</span>
+                <span><i class="fas fa-star"></i> 4.9</span>
+                <span><i class="fas fa-heart"></i> 3.1k</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-section bg-gray-800 text-white pt-12 pb-6 mt-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="footer-content">
+          <div class="footer-section-main">
+            <div class="footer-logo">
+              <span
+                class="text-3xl font-bold border-2 border-white rounded-full px-6 py-3"
+              >
+                Cook It Yourself
+              </span>
+              <p class="mt-4 text-gray-300 max-w-md">
+                Your ultimate destination for delicious recipes, cooking tips,
+                and culinary inspiration.
+              </p>
+            </div>
+
+            <div class="footer-social">
+              <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+              <div class="social-icons">
+                <a href="#" class="social-icon">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="/index.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/recipes.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Recipes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/category.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Categories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/about.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >About</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4 class="text-lg font-bold mb-4">Categories</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Breakfast</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Lunch</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Dinner</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Snacks</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4 class="text-lg font-bold mb-4">Support</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="/contact.html"
+                    class="hover:text-orange-400 transition-colors"
+                    >Contact Us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >FAQ</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-orange-400 transition-colors"
+                    >Terms of Service</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            <p>
+              &copy; <span id="footer-year"></span> Cook It Yourself. All rights
+              reserved.
+            </p>
+          </div>
+          <div class="footer-newsletter">
+            <h4 class="text-lg font-bold mb-2">Subscribe to our newsletter</h4>
+            <div class="newsletter-form">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="newsletter-input"
+              />
+              <button class="newsletter-button">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Developer Tag -->
+    <a
+      href="https://github.com/Abhishek7242"
+      target="_blank"
+      title="Abhishek Verma (GitHub)"
+      class="fixed bottom-6 right-6 z-50 flex flex-col items-center group"
+    >
+      <img
+        src="./Profile_Image.png"
+        alt="Abhishek Verma"
+        class="w-16 h-16 rounded-full border-4 border-orange-400 shadow-lg transition-transform transform group-hover:scale-110 bg-white"
+      />
+      <span
+        class="mt-2 px-3 bg-black py-1 bg-orange-400 text-white text-xs font-bold rounded-full shadow-lg opacity-90 group-hover:opacity-100 transition-opacity select-none"
+      >
+        Developer
+      </span>
+    </a>
+
+    <script>
+      // Set current year in footer
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("footer-year").textContent =
+          new Date().getFullYear();
+
+        // Add click handlers for category cards
+        const categoryButtons = document.querySelectorAll(".card-button");
+        categoryButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const categoryName =
+              this.parentElement.querySelector(".card-title").textContent;
+            alert(
+              `Exploring ${categoryName} recipes! This would navigate to the category page.`
+            );
+          });
+        });
+      });
+    </script>
+    <script src="./navbar.js"></script>
+
+  </body>
+</html>

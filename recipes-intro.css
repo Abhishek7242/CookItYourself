@@ -1,0 +1,53 @@
+@media (max-width: 930px) {
+ #intro img{
+     display: none;
+ }
+}
+@media (max-width: 450px) {
+ #top-recipes .top-recipes-card {
+    
+    width: 80%;
+   
+}
+#top-recipes {
+    margin:50px 4px!important;
+    padding:0 9px!important;
+
+}
+}
+@media (max-width: 390px) {
+ #top-recipes .top-recipes-card {
+    
+    width: 100%;
+   
+}
+#top-recipes {
+    margin:50px 4px!important;
+    padding:0 9px!important;
+
+}
+}
+@media (max-width: 450px) {
+ #top-recipes .best-recipes-card {
+    
+    width: 80%;
+   
+}
+#tbest-recipes {
+    margin:50px 4px!important;
+    padding:0 9px!important;
+
+}
+}
+@media (max-width: 390px) {
+ #best-recipes .best-recipes-card {
+    
+    width: 100%;
+   
+}
+#best-recipes {
+    margin:50px 4px!important;
+    padding:0 9px!important;
+
+}
+}

@@ -1,0 +1,211 @@
+/* Featured Recipes Section Styles */
+.featured-section {
+  margin-top: 4rem;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border-radius: 30px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Featured Card Styles */
+.featured-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.featured-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.featured-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.featured-card:hover .featured-image img {
+  transform: scale(1.05);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.featured-content {
+  padding: 1.5rem;
+}
+
+.featured-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.featured-description {
+  color: #718096;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.featured-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.featured-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.featured-meta i {
+  color: #ff6b35;
+  font-size: 0.8rem;
+}
+
+.featured-meta .fa-star {
+  color: #fbbf24;
+}
+
+.featured-meta .fa-heart {
+  color: #f56565;
+}
+
+/* Featured section animations */
+.featured-section {
+  animation: fadeInUp 1s ease-out;
+}
+
+.featured-card {
+  animation: fadeInUp 1s ease-out;
+  animation-fill-mode: both;
+}
+
+.featured-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.featured-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.featured-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Featured section responsive design */
+@media (max-width: 768px) {
+  .featured-section {
+    margin: 2rem 0;
+    padding: 2rem 0;
+    border-radius: 20px;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .featured-content {
+    padding: 1rem;
+  }
+
+  .featured-title {
+    font-size: 1.1rem;
+  }
+
+  .featured-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Featured section hover effects */
+.featured-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 53, 0.1),
+    rgba(247, 147, 30, 0.1)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.featured-card:hover::before {
+  opacity: 1;
+}
+
+/* Featured section loading animation */
+.featured-card.loading {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}

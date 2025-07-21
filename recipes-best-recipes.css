@@ -1,0 +1,20 @@
+#best-recipes{
+  margin: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #a1a1a138;
+}
+#best-recipes > div{
+}
+.best-recipes-item{
+    height: 300px;
+    width: 250px;
+    position: relative;
+}
+.best-recipes-item span{
+    bottom: 20px;
+    left: 10px;
+}
